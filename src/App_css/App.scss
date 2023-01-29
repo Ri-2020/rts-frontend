@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+
+// Fonts
+$ibmPlex :  'IBM Plex Mono', monospace;
+$nunito : 'Nunito', sans-serif;
+
+// Color pallet
+$navy  :#10162f;
+$skin : #fff0e5;
+$skinShadow : #F2B88D;
+$blue : #3a10e5;
+$white : #ffffff;
+$yellow : #ffd300;
+$greyShade : #d3d3d3;
+
+// mixin
+@mixin boxFlex( $justify , $align :center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    background: $skin;
+    background-image: linear-gradient($greyShade 1px, transparent 1px), linear-gradient(90deg, $greyShade 1px, transparent 1px);
+    background-size: 4em 4em;
+}
+
+.darkBorder{
+    border: 2px solid black;
+}
+
+.buttonBox{
+    background-color: $blue;
+    border : 2px solid white;
+    color : $skinShadow;
+    box-shadow: 10px 10px ;
+}
+
+.text-ibm{
+    font-family: $ibmPlex;
+}
+.text-nunito{
+    font-family: $nunito;
+}
+.u{
+    text-decoration-line: underline;
+}
+.b{
+    text-decoration-thickness: bold;
+}
+
+
+// Home CSS
+
+.headerBorder{
+    margin: 2em;
+    padding-left: 1em;
+    background: #FFD300;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    border: 3px solid #10162F;
+    filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, 0.441));
+    width: 770px;
+    left: 90.1px;
+    top: 79.44px;
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 65px;
+    color: $navy;
+    transition: .2s;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    // margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .05em; /* Adjust as needed */
+    animation: 
+    typing1.52s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+
+@keyframes typing {
+from { width: 0 }
+to { width: 770px }
+}
+
+  
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange; }
+}
+
+.headerBorder:hover{
+    scale: 1.1
+}
+
+
+.centerBlock{
+    @include boxFlex(space-between );
+    margin: 5em 5em 4em 5em;
+    .someAboutText{
+        width: 500px;
+        font-family: 'IBM Plex Mono';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 50px;
+        text-decoration-line: underline;
+
+        color: #10162F;
+
+    }
+
+    .aboutButton{
+        // background-color: white;
+        align-items: center;
+        width: 50vw;
+        @include boxFlex(center );
+        margin-left: 2em;
+       
+        .inside{
+            width: 300px;
+            height: 100px;
+            border: 4px solid #FFFFFF;
+            box-shadow: 6px 6px 0px #F2B88D;
+            font-family: $ibmPlex;
+            display: flex;
+            background: #3A10E5;
+            color: white;
+            @include boxFlex(center );
+            font-weight: 700;
+            font-size: xx-large;
+            transition: .1s;
+        }
+        .inside:hover{
+            background-color: $navy;
+            box-shadow: 10px 14px 0px #F2B88D;
+            position: relative;
+            top: -4px;
+            scale: 1.1;
+            cursor: pointer;
+        }
+    }
+
+
+}
+
+.loginBox{
+    border: 2px solid black;
+    margin: 0em 5em 2em 5em;
+    padding : 1em .5em;
+
+
+    .inpHead{
+        font-size: 2em;
+        font-weight: 600;
+        text-decoration-line: underline;
+        font-family: $ibmPlex;
+        margin: 0px 1em;
+
+    }
+    .inputControl{
+        margin: 1em;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .submitButton{
+        align-items: center;
+        margin-left: 2em;
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .inside{
+            padding: .4em 1em;
+            width: fit-content;
+            border: 3px solid black;
+            box-shadow: 3px 3px 0px #F2B88D;
+            display: flex;
+            font-family: $nunito;
+            background: #3A10E5;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 400;
+            transition: .1s;
+        }
+        .inside:hover{
+            background-color: $navy;
+            position: relative;
+            top: -3px;
+            box-shadow: 6px 9px 0px #F2B88D;
+            border-color: white;
+            scale: 1.5;
+        }
+
+    }
+    .inputboxes{
+        display: flex;
+        label{
+            margin: .2em 1em;
+            font-family: $nunito;
+            font-weight: 500;
+            font-size: 1.4em;
+            color: #0000;
+            span{
+                --c: #000000; 
+  
+                color: #0000;
+                background: 
+                  linear-gradient(90deg,#fff 50%,var(--c) 0) calc(100% - var(--_p,0%))/200% 100%,
+                  linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) 100% no-repeat;
+                -webkit-background-clip: text,padding-box;
+                        background-clip: text,padding-box;
+                transition: .3s;
+            }
+            span:hover{
+                --_p: 100%;
+            }
+            
+        }
+
+        
+
+    }
+    input{
+        padding: 1em;
+        width: 20vw;
+    }
+}
+
+
+.meme{
+    position:absolute;
+    z-index: -1;
+    padding: 2em 1em 1em 1em  ;
+    right: 100px;
+    margin-top: 40px;
+    transform: rotate(5deg);
+    border-radius: .2em;
+    box-shadow: 7px 10px 0px rgb(46, 46, 46);
+    border: 1px dashed black;
+    background-color: $yellow;
+    top: 0;
+    img{
+        width: 180px;
+        border: 1px solid black;
+        border-style: groove;
+        transform : rotate(2deg);
+    }
+    img :hover{
+        transform: rotate(10deg);
+        scale: 2;
+    }
+    transition: .3s;
+}
+
+// @keyframes reveal {
+//     0%{
+//         background: linear-gradient(
+//             to right,
+//             black 0%,
+//             rgba(0, 0, 0, 0) 0% 100%,
+//         );
+//     }
+//     100%{
+//         background: linear-gradient(
+//             to right,
+//             black 0%,
+//             rgba(0, 0, 0, 0) 0% 100%,
+//         );
+//     }
+// }
+
+

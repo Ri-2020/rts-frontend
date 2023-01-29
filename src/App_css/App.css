@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  background: #fff0e5;
+  background-image: linear-gradient(#d3d3d3 1px, transparent 1px), linear-gradient(90deg, #d3d3d3 1px, transparent 1px);
+  background-size: 4em 4em;
+}
+
+.darkBorder {
+  border: 2px solid black;
+}
+
+.buttonBox {
+  background-color: #3a10e5;
+  border: 2px solid white;
+  color: #F2B88D;
+  box-shadow: 10px 10px;
+}
+
+.text-ibm {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.text-nunito {
+  font-family: "Nunito", sans-serif;
+}
+
+.u {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.b {
+  text-decoration-thickness: bold;
+}
+
+.headerBorder {
+  margin: 2em;
+  padding-left: 1em;
+  background: #FFD300;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  border: 3px solid #10162F;
+  filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, 0.441));
+  width: 770px;
+  left: 90.1px;
+  top: 79.44px;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 65px;
+  color: #10162f;
+  transition: 0.2s;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 0.05em; /* Adjust as needed */
+  -webkit-animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+          animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 770px;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 770px;
+  }
+}
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+.headerBorder:hover {
+  scale: 1.1;
+}
+
+.centerBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5em 5em 4em 5em;
+}
+.centerBlock .someAboutText {
+  width: 500px;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #10162F;
+}
+.centerBlock .aboutButton {
+  align-items: center;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2em;
+}
+.centerBlock .aboutButton .inside {
+  width: 300px;
+  height: 100px;
+  border: 4px solid #FFFFFF;
+  box-shadow: 6px 6px 0px #F2B88D;
+  font-family: "IBM Plex Mono", monospace;
+  display: flex;
+  background: #3A10E5;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: xx-large;
+  transition: 0.1s;
+}
+.centerBlock .aboutButton .inside:hover {
+  background-color: #10162f;
+  box-shadow: 10px 14px 0px #F2B88D;
+  position: relative;
+  top: -4px;
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.loginBox {
+  border: 2px solid black;
+  margin: 0em 5em 2em 5em;
+  padding: 1em 0.5em;
+}
+.loginBox .inpHead {
+  font-size: 2em;
+  font-weight: 600;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  font-family: "IBM Plex Mono", monospace;
+  margin: 0px 1em;
+}
+.loginBox .inputControl {
+  margin: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.loginBox .submitButton {
+  align-items: center;
+  margin-left: 2em;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginBox .submitButton .inside {
+  padding: 0.4em 1em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0px #F2B88D;
+  display: flex;
+  font-family: "Nunito", sans-serif;
+  background: #3A10E5;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  transition: 0.1s;
+}
+.loginBox .submitButton .inside:hover {
+  background-color: #10162f;
+  position: relative;
+  top: -3px;
+  box-shadow: 6px 9px 0px #F2B88D;
+  border-color: white;
+  scale: 1.5;
+}
+.loginBox .inputboxes {
+  display: flex;
+}
+.loginBox .inputboxes label {
+  margin: 0.2em 1em;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 1.4em;
+  color: rgba(0, 0, 0, 0);
+}
+.loginBox .inputboxes label span {
+  --c: #000000;
+  color: rgba(0, 0, 0, 0);
+  background: linear-gradient(90deg, #fff 50%, var(--c) 0) calc(100% - var(--_p, 0%))/200% 100%, linear-gradient(var(--c) 0 0) 0% 100%/var(--_p, 0%) 100% no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.3s;
+}
+.loginBox .inputboxes label span:hover {
+  --_p: 100%;
+}
+.loginBox input {
+  padding: 1em;
+  width: 20vw;
+}
+
+.meme {
+  position: absolute;
+  z-index: -1;
+  padding: 2em 1em 1em 1em;
+  right: 100px;
+  margin-top: 40px;
+  transform: rotate(5deg);
+  border-radius: 0.2em;
+  box-shadow: 7px 10px 0px rgb(46, 46, 46);
+  border: 1px dashed black;
+  background-color: #ffd300;
+  top: 0;
+  transition: 0.3s;
+}
+.meme img {
+  width: 180px;
+  border: 1px solid black;
+  border-style: groove;
+  transform: rotate(2deg);
+}
+.meme img :hover {
+  transform: rotate(10deg);
+  scale: 2;
+}/*# sourceMappingURL=App.css.map */
