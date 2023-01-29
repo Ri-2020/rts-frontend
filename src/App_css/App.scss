@@ -27,15 +27,8 @@ $greyShade : #d3d3d3;
     background-size: 4em 4em;
 }
 
-.homeBox{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    overflow-y: hidden;
-    @include backgroudGrid();
-   
-}
+
+// util classes
 
 .darkBorder{
     border: 2px solid black;
@@ -60,6 +53,18 @@ $greyShade : #d3d3d3;
 .b{
     text-decoration-thickness: bold;
 }
+
+// Home CSS
+
+.homeBox{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    @include backgroudGrid(); 
+}
+
 
 
 // Home CSS

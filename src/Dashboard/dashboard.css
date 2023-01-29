@@ -1,0 +1,41 @@
+.darkBorder {
+  border: 2px solid black;
+}
+
+.buttonBox {
+  background-color: #3a10e5;
+  border: 2px solid white;
+  color: #F2B88D;
+  box-shadow: 10px 10px;
+}
+
+.text-ibm {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.text-nunito {
+  font-family: "Nunito", sans-serif;
+}
+
+.u {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.b {
+  text-decoration-thickness: bold;
+}
+
+.dashboardBox {
+  margin: -4em;
+  padding: 0;
+  min-height: 100vh;
+  background: #fff0e5;
+  background-image: linear-gradient(#d3d3d3 1px, transparent 1px), linear-gradient(90deg, #d3d3d3 1px, transparent 1px);
+  background-size: 4em 4em;
+}
+
+.dashboard_header {
+  margin: 2em;
+  padding: 0.2em;
+}/*# sourceMappingURL=dashboard.css.map */
