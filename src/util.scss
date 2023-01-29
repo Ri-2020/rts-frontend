@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+
+// Fonts
+$ibmPlex :  'IBM Plex Mono', monospace;
+$nunito : 'Nunito', sans-serif;
+
+// Color pallet
+$navy  :#10162f;
+$skin : #fff0e5;
+$skinShadow : #F2B88D;
+$blue : #3a10e5;
+$white : #ffffff;
+$yellow : #ffd300;
+$greyShade : #d3d3d3;
+
+// mixin
+@mixin boxFlex( $justify , $align :center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin backgroudGrid(){
+    background: $skin;
+    background-image: linear-gradient($greyShade 1px, transparent 1px), linear-gradient(90deg, $greyShade 1px, transparent 1px);
+    background-size: 4em 4em;
+}
+
+@mixin buttonOuterCover(){
+    align-items: center;
+    margin-left: 2em;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin buttonInside($background :#3A10E5 , $borderColor :black , $shadowColor : #F2B88D , $font : $ibmPlex){
+    padding: .4em 1em;
+            width: fit-content;
+            border: 3px solid $borderColor;
+            box-shadow: 3px 3px 0px $shadowColor;
+            display: flex;
+            font-family: $font;
+            background: $background;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 400;
+            transition: .1s;
+}
+
+
+// util classes
+
+.darkBorder{
+    border: 2px solid black;
+}
+
+.buttonBox{
+    background-color: $blue;
+    border : 2px solid white;
+    color : $skinShadow;
+    box-shadow: 10px 10px ;
+}
+
+.text-ibm{
+    font-family: $ibmPlex;
+}
+.text-nunito{
+    font-family: $nunito;
+}
+.u{
+    text-decoration-line: underline;
+}
+.b{
+    text-decoration-thickness: bold;
+}
+

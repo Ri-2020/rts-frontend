@@ -8,13 +8,13 @@ export const Dashboard = () => {
             <div  className=' darkBorder headerBorder'>
                     Hi, Rohit Gupta (20-0736-013-0047)
             </div>
-            <div>
+            <div className='dashboard_header_right'>
                     <div className='dashboard_header_button'>
                         <div className='inside'>
                             edit
                         </div>
                     </div>
-                    <div className='submitButton'>
+                    <div className='dashboard_header_button'>
                         <div className='inside'>
                             home
                         </div>

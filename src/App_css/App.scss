@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
-
+@import "../util";
 
 // Fonts
 $ibmPlex :  'IBM Plex Mono', monospace;
@@ -184,26 +183,9 @@ from, to { border-color: transparent }
 
     }
     .submitButton{
-        align-items: center;
-        margin-left: 2em;
-        width: 50vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include buttonOuterCover();
         .inside{
-            padding: .4em 1em;
-            width: fit-content;
-            border: 3px solid black;
-            box-shadow: 3px 3px 0px #F2B88D;
-            display: flex;
-            font-family: $nunito;
-            background: #3A10E5;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: 400;
-            transition: .1s;
+            @include buttonInside( $font : $nunito);
         }
         .inside:hover{
             background-color: $navy;
